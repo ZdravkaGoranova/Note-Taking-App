@@ -36,4 +36,19 @@ main {
   background-size: cover;
   height: 50rem;
   width: 100%;
+  color: #fff;
+}
+.create-note {
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: center;
+  align-items: center;
+}
+.create-note form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+
 }

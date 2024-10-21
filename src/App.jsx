@@ -12,7 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/"></Route>
+          {/* <Route path="/createNote" element={<CreateNote></CreateNote>}></Route> */}
         </Routes>
       </BrowserRouter>
    
