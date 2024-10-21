@@ -41,9 +41,32 @@ main {
 .create-note {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset --6px -4px 2px rgb(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgb(255, 255, 255, 0.326);
+  color: #fff;
+  padding: 15px;
+
+  textarea {
+    font-size: 18px;
+    resize: none;
+    border-radius: 15px;
+    /* color: #fff;
+  border: none;
+  background: transparent; */
+    white-space: pre-wrap;
+  }
+  form input {
+    border-radius: 15px;
+    white-space: pre-wrap;
+    font-size: 18px;
+    resize: none;
+  }
 }
 .create-note form {
   display: flex;
@@ -106,17 +129,16 @@ main {
 }
 .note-body {
   font-weight: 500;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .note-content {
- border-top: 2px solid #0097d8;
- padding-top: 12px;
+  border-top: 2px solid #0097d8;
+  padding-top: 12px;
   font-style: italic;
 }
-.list-empty{
+.list-empty {
   margin: 0 auto;
-   font-weight: 700;
-font-size: 30px;
+  font-weight: 700;
+  font-size: 30px;
 }
-

@@ -37,7 +37,7 @@ const CreateNote = ({
             }}
             rows={10}
           ></textarea>
-          <button className="btn_save" onClick={saveHandler}>
+          <button className="note_save" onClick={saveHandler}>
             Save
           </button>
         </form>
