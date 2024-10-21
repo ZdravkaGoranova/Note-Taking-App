@@ -36,4 +36,109 @@ main {
   background-size: cover;
   height: 50rem;
   width: 100%;
+  color: #fff;
+}
+.create-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset --6px -4px 2px rgb(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgb(255, 255, 255, 0.326);
+  color: #fff;
+  padding: 15px;
+
+  textarea {
+    font-size: 18px;
+    resize: none;
+    border-radius: 15px;
+    /* color: #fff;
+  border: none;
+  background: transparent; */
+    white-space: pre-wrap;
+  }
+  form input {
+    border-radius: 15px;
+    white-space: pre-wrap;
+    font-size: 18px;
+    resize: none;
+  }
+}
+.create-note form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+}
+.note {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset --6px -4px 2px rgb(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgb(255, 255, 255, 0.326);
+  color: #fff;
+  padding: 15px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  width: 20%;
+  margin: 20px 10px;
+}
+
+.note_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.note_save {
+  background: transparent;
+  transition: 0.1s ease-in-out;
+  border: 1.5px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.note_save:hover {
+  background: #fff;
+  border: 1.5px solid #fff;
+
+  color: blue;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.note-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 30px;
+}
+.note-body {
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.note-content {
+  border-top: 2px solid #0097d8;
+  padding-top: 12px;
+  font-style: italic;
+}
+.list-empty {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 30px;
 }
