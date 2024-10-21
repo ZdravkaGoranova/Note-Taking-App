@@ -1,9 +1,9 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 footer {
   background-color: #000000;
@@ -14,8 +14,26 @@ footer {
   gap: 30px;
   height: 4.5rem;
   width: 100%;
-
 }
 footer:hover {
   color: #0097d8;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  width: 10vw;
+  height: 100%;
+  padding-bottom: 20px;
+}
+main {
+  flex: 1;
+  background-image: url('/public/5191c9e8ebe3f1f9dadb4363471f4256.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50rem;
+  width: 100%;
 }

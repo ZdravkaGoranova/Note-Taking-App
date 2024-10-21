@@ -15,7 +15,7 @@ function App() {
           <Route path="/"></Route>
         </Routes>
       </BrowserRouter>
-      <h1>Note Taking App</h1>
+   
       <Header />
       <Main />
       <Footer />

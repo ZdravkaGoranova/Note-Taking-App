@@ -2,8 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>Header</div>
-  )
+    <header>
+      <img src="/public/logoAppGreat.jpg" alt="" />
+    </header>
+  );
 }
 
 export default Header
