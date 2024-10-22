@@ -6,22 +6,19 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './Components/Pages/Main.jsx';
 import Footer from './Components/Pages/Footer.jsx';
 import Header from './Components/Pages/Header.jsx';
-
+// import EditNote from './features/EditNote.jsx';
 
 function App() {
   return (
     <>
-      <Header />
-      <Main>
-        <BrowserRouter>
-          <Routes>
-            {/* <Route path="/createNote" element={<CreateNote />}></Route> */}
-            {/* <Route path="/edit:id" element={<CreateNote />}></Route>
-            <Route path="/" element={<Main/>}></Route> */}
-          </Routes>
-        </BrowserRouter>
-      </Main>
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          {/* <Route path="/edit/:id" element={<EditNote />} /> */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
