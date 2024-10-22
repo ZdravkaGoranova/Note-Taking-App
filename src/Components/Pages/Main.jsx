@@ -19,11 +19,49 @@ const Main = () => {
   // const [error, setError] = useState('');
   // const navigate = useNavigate();
 
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('Note-Talking'));
-    if (data) {
+  const fetchNotes = async () => {
+    try {
+      // const response = await fetch('https://api.restful-api.dev/objects');
+      // const data = await response.json();
+
+      const data = JSON.parse(localStorage.getItem('Note-Talking'));
+      if (data) {
+        setNotes(data);
+      }
       setNotes(data);
+      console.log(data);
+    } catch (error) {
+      console.error('Error fetching notes:', error);
+      toast.error('Error fetching notes:!', error);
     }
+  };
+
+  const saveNote = async (note) => {
+    try {
+      const response = await fetch('https://api.restful-api.dev/objects', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(note),
+      });
+      if (response.ok) {
+        // const newNote = await response.json();
+        const newNote = await note;
+
+        setNotes([...notes, newNote]);
+        toast.success('Note saved successfully!');
+      } else {
+        throw new Error('Failed to save the note');
+      }
+    } catch (error) {
+      console.error('Error saving note:', error);
+      toast.error('Error saving note!');
+    }
+  };
+
+  useEffect(() => {
+    fetchNotes();
   }, []);
 
   useEffect(() => {
@@ -85,6 +123,14 @@ const Main = () => {
           content: inputContent,
         },
       ]);
+
+      const newNote = {
+        id: uuid(),
+        key: uuid(),
+        title: inputText,
+        content: inputContent,
+      };
+      saveNote(newNote);
 
       // toast('Success: This note is save Successfull!');
       toast.success('This Note is save Successfull!', {
