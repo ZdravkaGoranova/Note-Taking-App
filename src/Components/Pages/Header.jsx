@@ -3,7 +3,7 @@
 const Header = () => {
   return (
     <header>
-      <img src="/public/logoAppGreat.jpg" alt="" />
+      {/* <img src="/public/logoAppGreat.jpg" alt="" /> */}
     </header>
   );
 }

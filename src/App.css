@@ -23,10 +23,14 @@ header {
   justify-content: center;
   align-items: center;
 }
-header img {
+/* header img {
   width: 10vw;
   height: 100%;
   padding-bottom: 20px;
+} */
+header {
+  background-color: #000000;
+  height: 4.5rem;
 }
 main {
   flex: 1;
@@ -51,7 +55,9 @@ main {
   border: 1.5px solid rgb(255, 255, 255, 0.326);
   color: #fff;
   padding: 15px;
-
+  margin: 0px 20px;
+  width: 40%;
+  margin: 0 auto;
   textarea {
     font-size: 18px;
     resize: none;
