@@ -60,6 +60,28 @@ const Main = () => {
     }
   };
 
+  const deleteNote = async (id) => {
+    debugger;
+    try {
+      const newNotes = notes.filter((note) => note.id !== id);
+      const response = await fetch(`https://api.restful-api.dev/objects/6`, {
+        // const response = await fetch(`https://api.restful-api.dev/objects/${id}`, {
+        method: 'DELETE',
+      });
+      // if (response.ok) {
+      if (newNotes) {
+        setNotes(newNotes);
+
+        toast.success(`Note with ID: ${id} deleted successfully!`);
+      } else {
+        throw new Error('Failed to delete the note');
+      }
+    } catch (error) {
+      console.error('Error deleting note:', error);
+      toast.error('Error deleting note!');
+    }
+  };
+
   useEffect(() => {
     fetchNotes();
   }, []);
@@ -93,11 +115,7 @@ const Main = () => {
   };
 
   const deleteHandler = (id) => {
-    const newNotes = notes.filter((note) => note.id !== id);
-    if (newNotes) {
-      setNotes(newNotes);
-      toast.info(`The Note whit ID:${id} was deleted!`);
-    }
+    deleteNote(id);
   };
   const saveHandler = (e) => {
     e.preventDefault();
